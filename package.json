@@ -1,0 +1,31 @@
+{
+  "name": "casprojects",
+  "version": "1.0.0",
+  "description": "This is the projects for CAS242 Burrito Masala website",
+  "main": "burrito.html\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DMasala.html",
+  "dependencies": {
+    "autoprefixer": "^6.3.1",
+    "css-loader": "^0.23.1",
+    "postcss": "^5.0.14",
+    "postcss-loader": "^0.8.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13",
+    "webpack-loader": "0.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.1",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "postcss": "^5.0.14",
+    "postcss-loader": "^0.8.0",
+    "scss-loader": "0.0.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13",
+    "webpack-loader": "0.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Keith Murphy",
+  "license": "MIT"
+}
