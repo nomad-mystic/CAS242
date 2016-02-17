@@ -1,12 +1,28 @@
-$font-stack: Arial, sans-serif;
-$mainFontColor: #000;
-$header1: 2em;
-$header2: 1.5em;
-$header3: 1.25em;
-$header4: 1em;
-$header5: 1em;
+/*--Color Variables---*/
+$bodyBackgroundColor: rgba(255, 143, 132, 0.35);
+$mainOrange: rgba(237, 61, 61, 0.67);
+$mainOrangeLite:  #FF8F84;
+$mainOrangeDark: #A41102;
+$black90RGBA: rgba(0,0,0,.90);
 
+/* General Variables */
+$bodyFontSize: 1em;
+$headerSize1: 2em;
 
+$headerSize5: 1em;
+
+$black90RGBABorder: solid 1px $black90RGBA;
+$black90BoxShadow: 0 1px 2px 0 $black90RGBA;
+/*--Fonts--*/
+$headerFontStyle: Alegreya, Arial, sans-serif;
+$textFontFamily: Cabin, Arial, sans-serif;
+
+/*---Mobile Variables*/
+$mHeaderSize2: 2em;
+$mHeaderSize3: 1.25em;
+$mHeaderSize4: 1.25em;
+$mParagraphSize: 1.25em;
+$mSocialSize: 2em;
 
 
 

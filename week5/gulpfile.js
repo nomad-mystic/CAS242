@@ -18,8 +18,8 @@ gulp.task('css', function() {
   gulp.src(source + 'styles.css')
   .pipe(postcss([
     precss(),
-    animation(),
     autoprefixer()
+      //,animation()
     //,cssnano()
   ]))
   .on('error', gutil.log)
@@ -29,6 +29,7 @@ gulp.task('css', function() {
 gulp.task('watch', function() {
   gulp.watch(source + '**/*.css', ['css']);
   gulp.watch(dest + '**/*.html', ['html']);
+  gulp.watch('/gulpfile.js', ['js']);
 });
 
 gulp.task('webserver', function() {
