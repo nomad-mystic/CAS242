@@ -1,0 +1,308 @@
+{
+    "name": "start",
+    "children": [
+        {
+            "name": "Limited edition",
+            "children": [
+                {
+                    "name": "Alpha"
+                },
+                {
+                    "name": "Beta"
+                },
+                {
+                    "name": "Unlimitted Edition"
+                },
+                {
+                    "name": "Collectors Edition"
+                },
+                {
+                    "name": "Collectors Edition International"
+                }
+            ]
+        },
+        {
+            "name": "Core Sets",
+            "children": [
+                {
+                    "name": "Revised"
+                },
+                {
+                    "name": "Fourth Edition"
+                },
+                {
+                    "name": "Fifth Editio"
+                },
+                {
+                    "name": "Sixth Edition"
+                },
+                {
+                    "name": "Seventh Edition"
+                },
+                {
+                    "name": "Eighth Edition"
+                },
+                {
+                    "name": "Ninth Edition"
+                },
+                {
+                    "name": "Tenth Edition"
+                },
+                {
+                    "name": "M10"
+                },
+                {
+                    "name": "M11"
+                },
+                {
+                    "name": "M12"
+                },
+                {
+                    "name": "M13"
+                },
+                {
+                    "name": "M14"
+                },
+                {
+                    "name": "M15"
+                }
+            ]
+        },
+        {
+            "name": "Early Expansions",
+            "children": [
+                {
+                    "name": "Arabian Nights"
+                },
+                {
+                    "name": "Antiquities"
+                },
+                {
+                    "name": "Legends"
+                },
+                {
+                    "name": "The Dark"
+                },
+                {
+                    "name": "Fallen Empires"
+                }
+            ]
+        },
+        {
+            "name": "Ice Age Block",
+            "children": [
+                {
+                    "name": "Ice Age"
+                },
+                {
+                    "name": "Homelands"
+                },
+                {
+                    "name": "Alliances"
+                },
+                {
+                    "name": "Coldsnap"
+                }
+            ]
+        },
+        {
+            "name": "Mirage Block",
+            "children": [
+                {
+                    "name": "Mirage"
+                },
+                {
+                    "name": "Visions"
+                },
+                {
+                    "name": "Weatherlight"
+                }
+            ]
+        },
+        {
+            "name": "Tempest Block",
+            "children": [
+                {
+                    "name": "Tempest"
+                },
+                {
+                    "name": "Stronghold"
+                },
+                {
+                    "name": "Exodus"
+                }
+            ]
+        },
+        {
+            "name": "Urza's Block",
+            "children": [
+                {
+                    "name": "Urza's Sage"
+                },
+                {
+                    "name": "Urza's legacy"
+                },
+                {
+                    "name": "Urza's Destiny"
+                }
+            ]
+        },
+        {
+            "name": "Masques Block",
+            "children": [
+                {
+                    "name": "Mercadian Masques"
+                },
+                {
+                    "name": "Nemesis"
+                },
+                {
+                    "name": "Prophecy"
+                }
+            ]
+        },
+        {
+            "name": "Invasion Block",
+            "children": [
+                {
+                    "name": "Invasion"
+                },
+                {
+                    "name": "Planeshift"
+                },
+                {
+                    "name": "Apocalypse"
+                }
+            ]
+        },
+        {
+            "name": "Odyssey Block",
+            "children": [
+                {
+                    "name": "Odyssey"
+                },
+                {
+                    "name": "Torment"
+                },
+                {
+                    "name": "Judgment"
+                }
+            ]
+        },
+        {
+            "name": "Onslaught Block",
+            "children": [
+                {
+                    "name": "Onslaught"
+                },
+                {
+                    "name": "Legions"
+                },
+                {
+                    "name": "Scourge"
+                }
+            ]
+        },
+        {
+            "name": "Mirrodin Block",
+            "children": [
+                {
+                    "name": "Mirrodin"
+                },
+                {
+                    "name": "Darksteel"
+                },
+                {
+                    "name": "Fifth Dawn"
+                }
+            ]
+        },
+        {
+            "name": "Kamigawa Block",
+            "children": [
+                {
+                    "name": "Champoins of Kamigawa"
+                },
+                {
+                    "name": "Betrayers of Kamigawa"
+                },
+                {
+                    "name": "Saviors of Kamigawa"
+                }
+            ]
+        },
+        {
+            "name": "Ravnica Block",
+            "children": [
+                {
+                    "name": "Ravnica: City Of Guilds"
+                },
+                {
+                    "name": "Guildpact"
+                },
+                {
+                    "name": "Dissension"
+                }
+            ]
+        },
+        {
+            "name": "Time Spiral Block",
+            "children": [
+                {
+                    "name": "Time Spiral"
+                },
+                {
+                    "name": "planar Chaos"
+                },
+                {
+                    "name": "Future Sight"
+                }
+            ]
+        },
+        {
+            "name": "Lorwyn-Shadowmoor Block",
+            "children": [
+                {
+                    "name": "Lorwyn"
+                },
+                {
+                    "name": "Morningtide"
+                },
+                {
+                    "name": "Shadowmoor"
+                },
+                {
+                    "name": "Eventide"
+                }
+            ]
+        },
+        {
+            "name": "Shards of Alara",
+            "children": [
+                {
+                    "name": "Shards of Alara"
+                },
+                {
+                    "name": "Conflux"
+                },
+                {
+                    "name": "Alara Reborn"
+                }
+            ]
+        },
+        {
+            "name": "Zendikar Block",
+            "children": [
+                {
+                    "name": "Zendikar"
+                },
+                {
+                    "name": "Worldwake"
+                },
+                {
+                    "name": "Rise of the Eldrazi"
+                }
+            ]
+        }
+    ]
+}

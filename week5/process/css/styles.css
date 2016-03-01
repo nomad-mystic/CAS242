@@ -1,5 +1,5 @@
-/* CSS FOR ALL SCREEN RESOLUTIONS (MOBILE IN PORTRAIT) AND ABOVE */
 
+/*--Imports for all SCSS files--*/
 @import 'reset';
 @import 'variables';
 @import 'base';

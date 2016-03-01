@@ -3,6 +3,15 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+/*---helper classes--*/
+.largeMenu_1,
+.largeMenu_2,
+.largeMenu_3 {
+    display: none;
+}
+.wrapper {
+    position: relative;
+}
 a:link {
     text-decoration: none;
 }
@@ -15,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background: $bodyBackgroundColor;
+    background: #fff;
     font-size: $bodyFontSize;
 }
 
@@ -23,37 +32,43 @@ header {
     background: $mainOrange;
     position: relative;
     h1 {
-        font-size: $headerSize1;
-        text-align: left;
+        font-size: $mHeaderSize1;
+        text-align: center;
         font-family: $headerFontStyle;
-        margin: 10% 0 0 5%;
+        margin: 1em 0 0 5%;
     }
     h2 {
-        font-size: $headerSize2;
-        text-align: left;
+        font-size: $mHeaderSize2;
+        text-align: center;
         padding-bottom: 1em;
         margin: 0 0 0 5%;
     }
     i.menuOpen {
         position: absolute;
-        left: 10px;
+        right: 10px;
         top: 10px;
+        cursor: pointer;
      }
+    .logo {
+        margin: 1% auto;
+    }
 } /*---end header--*/
 
 nav {
+    display: none;
     position: absolute;
     z-index: 100;
-    left: -100%;
+    right: -75%;
     height: 100vh;
-    width: 75%;
-    background-color: rgba(255,255,255,.95);
+    width: 50%;
+    background-color: rgba(255,255,255, 1);
     .closeMenu {
         position: relative;
         i.menuClose {
             position: absolute;
-            right: 10px;
+            left: 10px;
             top: 10px;
+            cursor: pointer;
         }
     }
     .menuItems {
@@ -74,6 +89,7 @@ nav {
             color: $black90RGBA;
             background: #fff;
             transition: all .25s linear;
+            text-align: right;
             &:hover {
                 color: #fff;
                 background: $black90RGBA;
@@ -85,6 +101,7 @@ nav {
 footer {
     background: $mainOrange;
     padding: 2em 0;
+    margin: 1% 0 0 0;
 }
 
 .container-fluid {
@@ -107,7 +124,7 @@ footer {
     max-width: 100%;
     background-size: cover;
     h2 {
-        font-size: $mHeaderSize2;
+        font-size: 2em;
         color: #fff;
         text-align: center;
         padding-top: 20%;
@@ -157,8 +174,15 @@ footer {
         text-align: center;
         font-family: $textFontFamily;
     }
-    img.menu_1 {
+    .mMenu_1 {
         margin-bottom: 1px;
+    }
+    .largeMenu_1,
+    .largeMenu_2,
+    .largeMenu_3 {
+        box-shadow: 0 2px 1px 0 rgba(0,0,0,.25);
+        padding-right: 0;
+        padding-left: 0;
     }
     .menuOptionsH3 {
             background: #b61f1f;
@@ -177,18 +201,26 @@ footer {
             color: #fff;
             font-size: 1em;
         }
+        .col-xs-4 {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
     }
     .chooseThree {
         ul {
             background: #fff;
             padding: 1.5%;
         }
+        /*.col-xs-4 {*/
+            /*padding-right: 5px;*/
+            /*padding-left: 5px;*/
+        /*}*/
     }
     .toppings {
         margin: 2% auto;
         h3 {
             background: #b61f1f;
-            padding: .5em;
+            padding: .25em;
             color: #fff;
         }
         .row {
@@ -210,6 +242,15 @@ footer {
         color: #000;
         margin: 0 0 1px 0;
     }
+    h4 {
+        text-align: center;
+        font-size: 1em;
+        strong {
+            background: #b61f1f;
+            padding: 0 .5em;
+            color: #fff;
+        }
+    }
     address {
         display: inline;
     }
@@ -226,12 +267,12 @@ footer {
         font-size: $mHeaderSize2;
         padding: .5em;
         color: #000;
-        margin: 0 0 1px 0;
+        margin: 0 0 1% 0;
     }
     .mapContainer {
         margin: 0 auto;
         position: relative;
-        width: 100%;
+        width: 90%;
         padding-bottom: 56.25%;
     }
     .mapContainer #mapCanvas {
@@ -242,5 +283,8 @@ footer {
         left: 0;
         margin: 0;
         padding: 0;
+    }
+    .mapInfoWindow {
+        padding: 5% 0;
     }
 } /*end map--*/
