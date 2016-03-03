@@ -3,82 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <title>CAS242 Final</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        a:link {
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-        a:active {
-            text-decoration: none;
-        }
-        a:focus {
-            text-decoration: none;
-        }
-        aside {
-            background: #000;
-            height: 100vh;
-        }
-        nav {
 
+    <style>
+        #circle {
+            width: 50px;
+            height: 50px;
+            background: red;
+            -moz-border-radius: 50px;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+            margin: 5% 0;
         }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-        li {
-            float: left;
-            display: inline-block;
-            border-right: 1px solid #000;
-            /*border-left: 1px solid #000;*/
-            /*padding: .5em;*/
-        }
-        li a {
-            text-decoration: none;
-            text-align: center;
-            color: #fff;
-            display: block;
-            padding: 2em;
-        }
-        li a:hover {
-            background-color: #111;
-            color: #fff;
+        #rectangle {
+            width: 200px;
+            height: 100px;
+            background: red;
         }
     </style>
 </head>
-<body>
-
+<body class="">
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <img src="images/new-logo.png" class="img-responsive center-block" alt="Image">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 searchDiv">
+                <form class="search" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for a Product" aria-describedby="basic-addon1">
+                        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i></span>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 headerUserArea">
+                <p>Welcome Guest <span class="userName">Keith Murphy</span></p>
+                <p><span class="fa fa-shopping-cart"></span>Cart</p>
+            </div>
+        </div><!--end row-->
+    </div>
+</header>
 <nav>
     <ul>
-        <li><a href="">menu 1</a></li>
-        <li><a href="">menu 2</a></li>
-        <li><a href="">menu 3</a></li>
-        <li><a href="">menu 4</a></li>
-        <li><a href="">menu 5</a></li>
+        <li><a href="">All Sets</a></li>
+        <li><a href=""></a></li>
     </ul>
 </nav>
 
-<header>
 <img src="images/header.jpg" class="img-responsive" alt="Image">
-</header>
-
 <section class="container-fluid">
     <div class="row">
-        <aside class="col-sm-4 col-md-4">
-
+        <aside class="col-xs-2 col-sm-2 col-md-2">
+            <form action="" name="filterSetsForm" id="filterSetsForm">
+                <input type="radio" name="sets" id="allSets" value="All Sets">
+                <label for="allSets">All Sets</label>
+                <br>
+                <input type="radio" name="sets" id="allSets2" value="All Sets2">
+                <label for="allSets2">All Sets 2</label>
+            </form>
         </aside><!--end col-->
-        <section class="col-sm-8 col-md-8">
+        <section class="col-xs-10 col-sm-10 col-md-10">
             <article>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default" id="testingData">Testing Data</button>
+                <div class="testingTab">
+                    <div class="row">
+                        <div class="col-xs-2 col-sm-2 col-md-3 col-lg-3">
+                        	<img src="images/alpha.jpg" class="img-responsive" alt="Image">
+                        </div>
+                        <div class="col-xs-10 col-sm-10 col-md-9 col-lg-9">
+                        	<h2 class="setTitle">Title</h2>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3>Spotlight</h3>
+                                </div>
+                            	<div class="panel-body">
+                            	   <div class="row">
+                                       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 panel-seller">
+                                           <h3 class="seller">Seller</h3>
+                                           <h6 class="rating">Rating<span class="ratingNumber">100%</span><span class="numberOfSales">(10000+ Sales)</span></h6>
+                                       </div>
+                                       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                           <h3 class="quality">Near Mint</h3>
+                                           <h3 class="cost">$100.00</h3>
+                                           <h3 class="freeShipping">Free Shipping on Orders Over $25</h3>
+                                       </div>
+                                       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                           <input class="quantityToBuy" name="quantityToBuy" type="number" value="1" maxlength="3">
+                                           <div class="btn-group">
+                                               <button type="button" class="btn btn-default">left</button>
+                                           </div>
+                                       </div>
+                                   </div><!--end row-->
+                            	</div><!--end panel-body-->
+                            </div><!--end panel-->
+                        </div><!--end col-->
+                    </div><!--end row-->
                 </div>
-                <div id="dataDiv"  class="row"></div>
+                <div id="dataDiv"></div>
             </article>
         </section><!--end col-->
     </div><!--end row-->
@@ -88,8 +115,7 @@
     </footer>
 </section><!--end container-->
 
-<script src="lib/jquery.min.js"></script>
-<script src="lib/bootstrap.min.js"></script>
+
 <script src="js/scripts.js"></script>
 </body>
 </html>

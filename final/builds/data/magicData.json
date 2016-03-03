@@ -1,5 +1,28 @@
 {
     "name": "start",
+    "meta": {
+        "Quality": {
+            "1": "Mint",
+            "2": "Near Mint",
+            "3": "Lightly Played",
+            "4": "Heavily Played"
+        },
+        "sellerRating": {
+            "a": "A",
+            "b": "B",
+            "c": "C"
+        },
+        "sellers": [
+            "Tabletop Adventures",
+            "Snap Keep Gaming",
+            "Chits and Jitters",
+            "AD Crossroads",
+            "Guardian Games"
+        ],
+        "Quantity": [
+            1, 2, 3, 4, 5, 6, 7 , 8, 9 ,10
+        ]
+    },
     "children": [
         {
             "name": "Limited edition",
