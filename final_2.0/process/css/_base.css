@@ -1,0 +1,30 @@
+/*--Helper classes--*/
+.positionRelative {
+    position: relative;
+}
+.positionAbsolute {
+    position: absolute;
+}
+
+/*---General Styles---*/
+a:link {
+text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+a:focus {
+    text-decoration: none;
+}
+
+body {
+    font-size: 16px;
+}
+
+/*bootstrap*/
+.navbar {
+    border-radius: 0;
+}
