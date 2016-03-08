@@ -18,10 +18,13 @@ $(document).ready(function() {
 
     var windowFunctions = {
         loaded: function(headerParaTextHTML, headerParaText) {
+            console.log('this');
             if (windowWidth <= 776) {
                 var ParaTextString = headerParaTextHTML.toString();
                 var slicedString = ParaTextString.slice(0, 150);
                 headerParaText.html(slicedString + '...');
+            } else {
+                headerParaText.html(headerParaTextHTML);
             }
         },
         resize: function(headerParaTextHTML, headerParaText) {
@@ -31,15 +34,20 @@ $(document).ready(function() {
                 headerParaText.html(headerParaTextHTML);
                 console.log(headerParaTextHTML);
             } else {
-                windowFunctions.loaded(headerParaTextHTML, headerParaText);
+                this.loaded(headerParaTextHTML, headerParaText);
             }
         }
     };
     // Calling windowFunctions
     windowFunctions.loaded(headerParaTextHTML, headerParaText);
+
+    var resizeTimer;
     $(window).on('resize', function() {
-        windowFunctions.resize(headerParaTextHTML, headerParaText);
-    });
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            windowFunctions.resize(headerParaTextHTML, headerParaText);
+        }, 10);
+    }); // End resize
 
 }); // End ready
 

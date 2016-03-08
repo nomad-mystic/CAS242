@@ -128,6 +128,13 @@ body {
     padding: 1em;
 }
 .navbar .dropdownCol li a {}
+.navbar .navbar-brand {
+    background: url('../images/uDocumentaryLogo.png') no-repeat left center;
+    background-size: contain;
+    height: 50px;
+    width: 240px;
+    margin-right: 12px;
+}
 .jumbotron {
     padding-top: 80px;
     margin-bottom: 0;
