@@ -23,7 +23,18 @@ a:focus {
 body {
     font-size: 16px;
 }
-
+footer {
+    background: $baseDarkColor;
+i.social-icon {
+    background: #eee;
+    border-radius: 50%;
+}
+h2 {
+    font-family: $headerFont;
+    font-size: $mHeaderSize2;
+    margin: 2% 0;
+}
+}
 /*owlCarousel*/
 #owlCarousel .item img {
     display: block;
@@ -31,14 +42,19 @@ body {
     height: auto;
 }
 #owlCarousel {
-    .jumbotron img {
-        width: 100%;
-        border: 1px solid black;
+
+    .jumbotron {
+        background-color: #a97a5f;
+        img {
+            width: 95%;
+            border: 1px solid black;
+        }
     }
     .owl-controls {
         position: absolute;
         bottom: 20px;
         left: 50%;
+        margin-top: 10px;
      }
 }
 
@@ -75,7 +91,6 @@ body {
         z-index: 10;
         text-align: center;
         opacity: 0;
-        line-height: 0 !important;
         text-shadow: 0px 0px 9px #000;
         transition: all 0.3s;
         -webkit-transition: all 0.3s;
@@ -91,6 +106,8 @@ body {
     font-family: $menuFont;
     .dropdownCol {
         column-count: 3;
+    }
+    .dropdown-menu {
         li {
             display: block;
             color: $menuColor;
@@ -135,18 +152,6 @@ body {
         margin-bottom: 20px;
     }
 }
-footer {
-    background: $baseDarkColor;
-    i.social-icon {
-        background: #eee;
-        border-radius: 50%;
-    }
-    h2 {
-        font-family: $headerFont;
-        font-size: $mHeaderSize2;
-        margin: 2% 0;
-    }
-}
 /*sections*/
 .movieCarouselSection {
     margin: 5% 0 0 0;
@@ -166,7 +171,7 @@ footer {
     #owlCarousel {
         .jumbotron {
             img {
-                width: 200px;
+                width: 65%;
                 /*margin-right: 2%;*/
                 /*margin-left: 2%;*/
                 margin-top: 2%;
@@ -178,10 +183,19 @@ footer {
 @media (min-width: 992px) {
     #owlCarousel {
         .jumbotron img {
-            width: 280px;
+            width: 50%;
             /*margin-right: 2%;*/
             /*margin-left: 2%;*/
             margin-top: 2%;
+        }
+    }
+    header {
+
+        .jumbotron h1 {
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 2em;
         }
     }
 }

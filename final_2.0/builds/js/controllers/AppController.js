@@ -19,6 +19,7 @@ var app = angular.module('movieApp', [])
 // App Controller
 app.controller('AppController', ['$scope', '$http', function($scope, $http) {
 
+
     $http.get('data/newArrivals.json')
         .success(function(newArrivals) {
             $scope.newArrivals = newArrivals;
@@ -34,6 +35,7 @@ app.controller('AppController', ['$scope', '$http', function($scope, $http) {
             console.log(error);
         });
 
+    // For loading jQuery plugin after ngRepeat finishes
     $scope.$on('ngRepeatFinished', function (ngRepeatFinishedEvent) {
         jQueryFunctions.loadingCarousels();
     });
@@ -44,6 +46,7 @@ app.controller('AppController', ['$scope', '$http', function($scope, $http) {
         templateUrl: 'myPopoverTemplate.html',
         title: 'Title'
     };
+
 }]); // End app.controller
 
 // jQuery Functions
@@ -56,13 +59,13 @@ var jQueryFunctions = {
             itemsTablet: [600,4], //items between 600 and 0
             itemsMobile : [479,3],
             pagination : false,
-            rewindNav : false,
+            rewindNav : true,
             lazyLoad: true,
             //loop: false,
             navigation: true,
             navigationText: [
-                "<i class='fa fa-chevron-left'></i>",
-                "<i class='fa fa-chevron-right'></i>"
+                "<i class='fa fa-step-backward'></i>",
+                "<i class='fa fa-step-forward'></i>"
             ],
             scrollPerPage : true,
             slideSpeed : 1000,

@@ -12,13 +12,14 @@ $(document).ready(function() {
     });
 
     // Cutting off length of text in the header area when the screen size is mobile
-    var windowWidth = window.innerWidth;
+
     var headerParaText = $('.headerCarouselPara');
     var headerParaTextHTML = headerParaText.html();
 
     var windowFunctions = {
         loaded: function(headerParaTextHTML, headerParaText) {
-            console.log('this');
+            var windowWidth = window.innerWidth;
+
             if (windowWidth <= 776) {
                 var ParaTextString = headerParaTextHTML.toString();
                 var slicedString = ParaTextString.slice(0, 150);
@@ -31,9 +32,10 @@ $(document).ready(function() {
             var windowWidth = window.innerWidth;
 
             if (windowWidth >= 767) {
+
                 headerParaText.html(headerParaTextHTML);
-                console.log(headerParaTextHTML);
             } else {
+                console.log('this');
                 this.loaded(headerParaTextHTML, headerParaText);
             }
         }
