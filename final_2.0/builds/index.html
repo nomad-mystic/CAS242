@@ -136,9 +136,8 @@
     <div id="newArrivalsCarousel">
         <div class="item" data-ng-repeat="movie in newArrivals[0].results" on-finish-render>
             <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block">
-            <div class="box-cover-overlay">
-                <i class="fa fa-play play-button"></i>
-            </div>
+            <div class="box-cover-overlay"></div>
+            <i class="fa fa-play play-button"></i>
         </div>
     </div><!--newArrivalsCarousel-->
 </section>
@@ -146,22 +145,23 @@
     <h2>Top Rated</h2>
     <hr>
     <div id="historyCarousel">
-        <div class="item" data-ng-repeat="movie in topRated[0].results" on-finish-render>
-            <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block">
-            <div class="box-cover-overlay">
+        <div class="item positionRelative" data-ng-repeat="movie in topRated[0].results" on-finish-render>
+            <a  href=""
+                data-toggle="popover"
+                title="{{ movie.title }}"
+                data-content=
+                        "<h5>Release Date: {{ movie.release_date }}</h5>
+                        <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        <p>{{ movie.overview | limitTo:overviewLimit}}</p>"
+                class="tooltipAnchor"
+                ><!--| limitTo:overviewLimit-->
+                <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block">
+                <div class="box-cover-overlay"></div>
                 <i class="fa fa-play play-button"></i>
-            </div>
+            </a>
         </div>
     </div>
 </section>
-<button uib-popover-template="dynamicPopover.templateUrl" popover-title="{{dynamicPopover.title}}" type="button" class="btn btn-default">Popover With Template</button>
-<script type="text/ng-template" id="myPopoverTemplate.html">
-    <div>{{dynamicPopover.content}}</div>
-    <div class="form-group">
-        <label>Popup Title:</label>
-    </div>
-</script>
-
 <footer class="container-fluid">
     <section>
         <h2 class="text-center">Connect</h2>
@@ -174,17 +174,17 @@
                         </a>
                         <a href="#">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
+                                <i class="fa fa-facebook fa-stack-1x social-icon"></i>
                             </span>
                         </a>
                         <a href="#">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
+                                <i class="fa fa-google-plus fa-stack-1x social-icon"></i>
                             </span>
                         </a>
                         <a href="#">
                             <span class="fa-stack fa-lg">
-                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
+                                <i class="fa fa-youtube fa-stack-1x social-icon"></i>
                             </span>
                         </a>
                     </div><!--end Col-->

@@ -11,8 +11,9 @@ $(document).ready(function() {
         singleItem:true
     });
 
-    // Cutting off length of text in the header area when the screen size is mobile
+    // Working with tooltips
 
+    // Cutting off length of text in the header area when the screen size is mobile
     var headerParaText = $('.headerCarouselPara');
     var headerParaTextHTML = headerParaText.html();
 
@@ -51,5 +52,19 @@ $(document).ready(function() {
         }, 10);
     }); // End resize
 
+
+    //var slicePopoverPara = function() {
+        //var popoverParagraph = $('.popoverParagraph');
+        ////var popoverParaHTML = popoverParagraph.html();
+        //var popoverParagraphs = document.getElementsByClassName('popoverParagraph');
+        //var popoverAnchors = document.getElementsByClassName('popoverAnchor');
+        //
+        //console.log(popoverAnchors[0].dataset.content);
+        //for (var i=0; i < popoverParagraphs.length; i++) {
+        //    console.log('this');
+        //}
+        //var slicedPara = popoverParaHTML.slice(0, 20);
+        //console.log(popoverParaHTML);
+    //};
 }); // End ready
 

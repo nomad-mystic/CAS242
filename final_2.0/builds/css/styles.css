@@ -109,22 +109,22 @@ footer h2 {
     -webkit-transition: all 0.3s;
     cursor: pointer;
 }
-.box-cover-overlay .play-button {
+.play-button {
     color: white;
-    top: 50%;
+    top: 40%;
     left: 0;
     width: 100%;
     height: 100%;
     position: absolute;
-    font-size: 4em;
-    z-index: 10;
+    font-size: 4.0em;
+    z-index: 9;
     text-align: center;
     opacity: 0;
     text-shadow: 0px 0px 9px #000;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
 }
-.box-cover-overlay:hover, .play-button:hover {
+#historyCarousel .box-cover-overlay:hover + .play-button, #newArrivalsCarousel .box-cover-overlay:hover + .play-button {
     opacity: 1;
 }
 /*bootstrap*/
@@ -185,6 +185,16 @@ footer h2 {
     font-family: 'Oswald','Arial','Helvitica','sans-serif';
     font-size: 1.5em;
     margin: 0 0 0 .5em;
+}
+/*---popover--*/
+.popover {
+    width: 150%;
+}
+.popover .popover-title {
+    color: #000;
+}
+.popover .popover-content {
+    color: #000;
 }
 @media (min-width: 767px) {
     #owlCarousel .jumbotron img {
