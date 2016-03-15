@@ -23,11 +23,7 @@
         // Filters
         $scope.overviewLimit = 240;
 
-
-        function overviewLimit() {
-            $scope.overviewLimit = 240;
-        }
-
+        /*--newArrivals--*/
         $http({
             method: 'GET',
             url: 'data/newArrivals.json'
@@ -38,18 +34,24 @@
             console.log(error);
         });
 
+        /*--topRated--*/
         $http({
            method: 'GET',
             url: 'data/topRated.json'
         }).then(function success(topRated) {
             $scope.topRated = topRated.data;
-            //console.log($scope.overview);
-            //for (var i=0; i < $scope.topRated[0].results.length; i++) {
-            //    if ($scope.topRated[0].results[i].overview.length >= 240) {
-            //        var originalText = $scope.topRated[0].results[i].overview;
-            //        $scope.topRated[0].results[i].overview = originalText + '...';
-            //    }
-            //}
+
+        }, function error() {
+            console.log(error);
+        });
+
+        /*---trending--*/
+        $http({
+            method: 'GET',
+            url: 'data/trending.json'
+        }).then(function success(trending) {
+            $scope.trending = trending.data;
+
         }, function error() {
             console.log(error);
         });
@@ -66,7 +68,7 @@
 // jQuery Functions
     var jQueryFunctions = {
         loadingCarousels: function() {
-            $('#newArrivalsCarousel, #historyCarousel').owlCarousel({
+            $('#newArrivalsCarousel, #historyCarousel, #trendingCarousel').owlCarousel({
                 items : 6, //items above 1000px browser width
                 itemsDesktop : [1199,6], //items between 1000px and 901px
                 itemsDesktopSmall : [900,4], //betweem 900px and 601px
@@ -94,22 +96,10 @@
             });
         },
         toggleHover: function() {
-            $('.tooltipAnchor').on('mouseover', function (event) {
-                //console.log(window);
-                //console.log(event);
-                //console.log(event.target.parentNode.parentNode.parentNode);
-
+            $('.tooltipAnchor').mouseover(function (event) {
                 // adding style to current tooltip item
                 var parent = event.target.parentNode.parentNode.parentNode;
-                //var rt = ($(window).width() - ($whatever.offset().left + $whatever.outerWidth()));
-                var rightElement = window.innerWidth - (parent.offsetLeft + parent.offsetWidth);
-                console.log(parent);
-                console.log(Number(rightElement));
 
-                if (rightElement >= 15) {
-                    parent.dataset.placement = 'right';
-                    console.log(this);
-                }
                 parent.style.position = 'relative';
                 parent.style.zIndex = '1000';
 
@@ -123,7 +113,7 @@
             });
         }
     }; // End jQueryFunctions
-})();
+})(); // End closure
 
 
 

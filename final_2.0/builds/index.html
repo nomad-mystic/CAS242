@@ -41,8 +41,8 @@
 			<span class="icon-bar"></span>
 		</button>
 		<a class="navbar-brand" href="#"></a>
-	</div>
-	<div class="collapse navbar-collapse navbar-ex1-collapse">
+    </div><!--end navbar-header-->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
 			<li role="presentation" class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -70,7 +70,7 @@
 					<li>Sexuality</li>
 					<li>Society</li>
 				</ul>
-			</li>
+			</li><!--end Categories-->
 			<li role="presentation" class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 					Explore <span class="caret"></span>
@@ -81,8 +81,8 @@
                     <li>Explore 3</li>
                     <li>Explore 4</li>
 				</ul>
-			</li>
-		</ul>
+			</li><!--end Explore--*/
+		</ul><!--end  navbar-nav--*/
 	</div><!-- /.navbar-collapse -->
 </nav>
 <header>
@@ -134,10 +134,21 @@
     <h2>New Arrivals</h2>
     <hr>
     <div id="newArrivalsCarousel">
-        <div class="item" data-ng-repeat="movie in newArrivals[0].results" on-finish-render>
-            <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block">
-            <div class="box-cover-overlay"></div>
-            <i class="fa fa-play play-button"></i>
+        <div class="item positionRelative" data-ng-repeat="movie in newArrivals[0].results" on-finish-render>
+            <a  href=""
+                data-toggle="popover"
+                title="{{ movie.title }}"
+                data-content=
+                        "<h5>Release Date: {{ movie.release_date }}</h5>
+                        <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        <p>{{ movie.overview | limitTo:overviewLimit}}</p>"
+                class="tooltipAnchor"
+                data-placement="right"
+            ><!--| limitTo:overviewLimit-->
+                <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block">
+                <div class="box-cover-overlay"></div>
+                <i class="fa fa-play play-button"></i>
+            </a>
         </div>
     </div><!--newArrivalsCarousel-->
 </section>
@@ -154,71 +165,81 @@
                         <h5>Voter Rating: {{ movie.vote_average}}</h5>
                         <p>{{ movie.overview | limitTo:overviewLimit}}</p>"
                 class="tooltipAnchor"
+                data-placement="right"
                 ><!--| limitTo:overviewLimit-->
                 <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block">
                 <div class="box-cover-overlay"></div>
                 <i class="fa fa-play play-button"></i>
             </a>
         </div>
-    </div>
+    </div><!--end historyCarousel-->
+</section>
+<section class="topRated movieCarouselSection">
+    <h2>Trending</h2>
+    <hr>
+    <div id="trendingCarousel">
+        <div class="item positionRelative" data-ng-repeat="movie in trending[0].results" on-finish-render>
+            <a  href=""
+                data-toggle="popover"
+                title="{{ movie.title }}"
+                data-content=
+                        "<h5>Release Date: {{ movie.release_date }}</h5>
+                        <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        <p>{{ movie.overview | limitTo:overviewLimit}}</p>"
+                class="tooltipAnchor"
+                data-placement="right"
+            ><!--| limitTo:overviewLimit-->
+                <img data-ng-src="http://image.tmdb.org/t/p/w500/{{ movie.poster_path }}?api_key=4604edc78a0e2eaa3513a344da4d71ca" alt="" class="img-responsive center-block">
+                <div class="box-cover-overlay"></div>
+                <i class="fa fa-play play-button"></i>
+            </a>
+        </div>
+    </div><!--end historyCarousel-->
 </section>
 <footer class="container-fluid">
     <section>
-        <h2 class="text-center">Connect</h2>
         <article class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-facebook fa-stack-1x social-icon"></i>
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-google-plus fa-stack-1x social-icon"></i>
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-youtube fa-stack-1x social-icon"></i>
-                            </span>
-                        </a>
-                    </div><!--end Col-->
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
-                            </span>
-                        </a>
-                        <a href="#">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-twitter fa-stack-1x social-icon"></i>
-                            </span>
-                        </a>
-                    </div><!--end Col-->
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                        <h2>Sign-up for News</h2>
-                        <form action="" class="form-inline">
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-                            </div>
-                            <button type="submit" class="btn btn-default">Sign-up</button>
-                        </form>
-                    </div><!--end Col-->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sitemap text-center">
+                <h2 class="text-center">Site Map</h2>
+                <a href="#">About Us</a>
+                <a href="#">Partners</a>
+                <a href="#">Our Policies</a>
+                <a href="#">Contact</a>
+                <br>
+                <a href="http:///nomadmystic.com" target="_blank">&copy;2016 Nomad Mystic Development </a>
+            </div><!--end Col-->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                <h2 class="text-center">Connect</h2>
+                <a href="#">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-twitter fa-stack-1x social-icon"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-facebook fa-stack-1x social-icon"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-google-plus fa-stack-1x social-icon"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-youtube fa-stack-1x social-icon"></i>
+                    </span>
+                </a>
+            </div><!--end Col-->
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 center-block">
+                <form action="" class="form-inline">
+                    <h2 class="text-center">Sign-up for News</h2>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                        <button type="submit" class="btn btn-default">Sign-up</button>
+                    </div>
+                </form>
+            </div><!--end Col-->
         </article><!--end row-->
     </section>
 </footer>

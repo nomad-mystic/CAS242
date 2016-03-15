@@ -58,8 +58,55 @@ a:focus {
 body {
     font-size: 16px;
 }
+header {
+    /*--end jambotron--*/
+}
+header .owl-wrapper .jumbotron {
+    background-color: #a97a5f;
+}
+header .owl-wrapper .jumbotron img {
+    width: 95%;
+    border: 1px solid black;
+}
+header .jumbotron {
+    padding-top: 80px;
+    margin-bottom: 0;
+}
+header .jumbotron .featured-background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    background: url('../images/backgroundTexture_1.jpg') center;
+}
+header .jumbotron h1 {
+    font-size: 2em;
+}
+header .jumbotron h1 a {
+    color: #FFAB00;
+}
+header .jumbotron p {
+    color: #fff;
+    line-height: 1.25em;
+}
+header .jumbotron .btn-primary {
+    margin-bottom: 20px;
+}
+header .headerCarouselText h1 {
+    font-size: 2.5em;
+}
+header .headerCarouselPara {
+    font-size: 1.25em;
+}
+/*-end header-*/
 footer {
     background: #222;
+    padding: 3% 0;
+    /*--end sitemap--*/
 }
 footer i.social-icon {
     background: #eee;
@@ -68,20 +115,41 @@ footer i.social-icon {
 footer h2 {
     font-family: 'Oswald','Arial','Helvitica','sans-serif';
     font-size: 1.5em;
-    margin: 2% 0;
+    color: #fff;
+    margin: 2% 0 4%;
 }
+footer .form-control {
+    display: block;
+}
+footer button[type="submit"] {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2%;
+}
+footer .sitemap a {
+    padding: .5em;
+    color: #C8C8C8;
+    font-family: 'Roboto',Arial,Helvitica,sans-serif;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+}
+footer .sitemap a:hover {
+    color: #fff;
+}
+footer .sitemap a[target="_blank"] {
+    display: block;
+    margin: 2% 0 0;
+}
+/*-end footer-*/
 /*owlCarousel*/
 #owlCarousel .item img {
     display: block;
     max-width: 100%;
     height: auto;
 }
-#owlCarousel .jumbotron {
-    background-color: #a97a5f;
-}
-#owlCarousel .jumbotron img {
-    width: 95%;
-    border: 1px solid black;
+#owlCarousel .owl-wrapper-outer {
+    padding: 2% 0;
 }
 #owlCarousel .owl-controls {
     position: absolute;
@@ -89,7 +157,7 @@ footer h2 {
     left: 50%;
     margin-top: 10px;
 }
-#newArrivalsCarousel > div.owl-wrapper-outer > div .item, #historyCarousel > div.owl-wrapper-outer > div .item {
+#newArrivalsCarousel > div.owl-wrapper-outer > div .item, #trendingCarousel > div.owl-wrapper-outer > div .item, #historyCarousel > div.owl-wrapper-outer > div .item {
     background: #1eacbb;
     margin: 5px;
     color: #FFF;
@@ -114,7 +182,7 @@ footer h2 {
     top: 40%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     position: absolute;
     font-size: 4.0em;
     z-index: 9;
@@ -127,10 +195,14 @@ footer h2 {
 #historyCarousel .box-cover-overlay:hover + .play-button, #newArrivalsCarousel .box-cover-overlay:hover + .play-button {
     opacity: 1;
 }
-/*bootstrap*/
+/*--end owlCarousel--*/
+/*----------------------------bootstrap overrides*/
 .navbar {
     border-radius: 0;
     font-family: 'Roboto',Arial,Helvitica,sans-serif;
+}
+.navbar ul {
+    background: #222;
 }
 .navbar .dropdownCol {
     -webkit-column-count: 3;
@@ -142,8 +214,13 @@ footer h2 {
     color: #C8C8C8;
     line-height: 1.25em;
     padding: 1em;
+    cursor: pointer;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
 }
-.navbar .dropdown-menu li a {}
+.navbar .dropdown-menu li:hover {
+    color: #fff;
+}
 .navbar .navbar-brand {
     background: url('../images/uDocumentaryLogo.png') no-repeat left center;
     background-size: contain;
@@ -151,33 +228,8 @@ footer h2 {
     width: 240px;
     margin-right: 12px;
 }
-.jumbotron {
-    padding-top: 80px;
-    margin-bottom: 0;
-}
-.jumbotron .featured-background {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    opacity: .5;
-    background: url('../images/backgroundTexture_1.jpg') center;
-}
-.jumbotron h1 {
-    font-size: 2em;
-}
-.jumbotron p {
-    font-size: 1em;
-    color: #fff;
-    line-height: 1.25em;
-}
-.jumbotron .btn-primary {
-    margin-bottom: 20px;
-}
-/*sections*/
+/*--end navbar--*/
+/*------------------------------sections*/
 .movieCarouselSection {
     margin: 5% 0 0 0;
 }
@@ -186,9 +238,13 @@ footer h2 {
     font-size: 1.5em;
     margin: 0 0 0 .5em;
 }
-/*---popover--*/
+section .owlCarousel .owl-wrapper-outer {
+    padding: 5% 0;
+}
+/*------------------------------popover--*/
 .popover {
     width: 150%;
+    z-index: 1200;
 }
 .popover .popover-title {
     color: #000;
@@ -196,6 +252,7 @@ footer h2 {
 .popover .popover-content {
     color: #000;
 }
+/*---------------------------------small screen above 767px--*/
 @media (min-width: 767px) {
     #owlCarousel .jumbotron img {
         width: 65%;
@@ -203,20 +260,84 @@ footer h2 {
         /*margin-left: 2%;*/
         margin-top: 2%;
     }
+    header .headerCarouselText h1 {
+        font-size: 2.5em;
+    }
+    header p {
+        font-size: 1.5em;
+    }
+    header .headerCarouselPara {
+        font-size: 1.5em;
+    }
+    /*--end header--*/
+    footer .form-inline .form-group {
+        display: block;
+        width: 35%;
+        margin: 0 auto;
+    }
+    footer button[type="submit"] {
+        display: inline-block;
+        margin-top: 0;
+    }
 }
 /*end min-width: 767px*/
 @media (min-width: 992px) {
-    #owlCarousel .jumbotron img {
-        width: 50%;
-        /*margin-right: 2%;*/
-        /*margin-left: 2%;*/
-        margin-top: 2%;
+    #newArrivalsCarousel > div.owl-wrapper-outer, #trendingCarousel > div.owl-wrapper-outer, #historyCarousel > div.owl-wrapper-outer {
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
-    header .jumbotron h1 {
-        font-size: 2.5em;
+    header .headerCarouselText h1 {
+        font-size: 3em;
     }
     header p {
         font-size: 2em;
     }
+    header .headerCarouselPara {
+        font-size: 2em;
+    }
+    header #owlCarousel .jumbotron img {
+        width: 55%;
+        /*margin-right: 2%;*/
+        /*margin-left: 2%;*/
+        margin-top: 2%;
+    }
+    /*-end header-*/
+    footer h2 {
+        font-size: 2em;
+        color: #fff;
+        margin: 2% 0;
+    }
+    footer .form-inline .form-group {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    /*--end footer--*/
+    /*margin: 1% 0 0 0;*/
+    .movieCarouselSection h2 {
+        font-size: 2em;
+    }
 }
+/*---end @media 992px-*/
+/*--large screens above 1200px width--*/
+@media (min-width: 1400px) {
+    header #owlCarousel .jumbotron img {
+        width: 40%;
+        /*margin-right: 2%;*/
+        /*margin-left: 2%;*/
+        margin-top: 2%;
+    }
+    /*--end header--*/
+    .movieCarouselSection {
+        margin: 1% 0 0 0;
+    }
+    .movieCarouselSection h2 {
+        font-size: 2.5em;
+    }
+    #newArrivalsCarousel > div.owl-wrapper-outer, #trendingCarousel > div.owl-wrapper-outer, #historyCarousel > div.owl-wrapper-outer {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+/*---end @media 1400px-*/
 /*@import 'mediaQueries';*/
