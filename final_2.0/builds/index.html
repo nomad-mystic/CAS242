@@ -139,9 +139,11 @@
                 data-toggle="popover"
                 title="{{ movie.title }}"
                 data-content=
-                        "<h5>Release Date: {{ movie.release_date }}</h5>
-                        <h5>Voter Rating: {{ movie.vote_average}}</h5>
-                        <p>{{ movie.overview | limitTo:overviewLimit}}</p>"
+                        "<div class='movieMeta'>
+                            <h5>Release Date: {{ movie.release_date }}</h5>
+                            <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        </div>
+                        <p class='overview'>{{ movie.overview }}</p>"
                 class="tooltipAnchor"
                 data-placement="right"
             ><!--| limitTo:overviewLimit-->
@@ -161,9 +163,11 @@
                 data-toggle="popover"
                 title="{{ movie.title }}"
                 data-content=
-                        "<h5>Release Date: {{ movie.release_date }}</h5>
-                        <h5>Voter Rating: {{ movie.vote_average}}</h5>
-                        <p>{{ movie.overview | limitTo:overviewLimit}}</p>"
+                        "<div class='movieMeta'>
+                            <h5>Release Date: {{ movie.release_date }}</h5>
+                            <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        </div>
+                        <p class='overview'>{{ movie.overview }}</p>"
                 class="tooltipAnchor"
                 data-placement="right"
                 ><!--| limitTo:overviewLimit-->
@@ -174,18 +178,20 @@
         </div>
     </div><!--end historyCarousel-->
 </section>
-<section class="topRated movieCarouselSection">
+<section class="trending movieCarouselSection">
     <h2>Trending</h2>
     <hr>
     <div id="trendingCarousel">
         <div class="item positionRelative" data-ng-repeat="movie in trending[0].results" on-finish-render>
             <a  href=""
                 data-toggle="popover"
-                title="{{ movie.title }}"
+                title="<h3>{{ movie.title }}</h3>"
                 data-content=
-                        "<h5>Release Date: {{ movie.release_date }}</h5>
-                        <h5>Voter Rating: {{ movie.vote_average}}</h5>
-                        <p>{{ movie.overview | limitTo:overviewLimit}}</p>"
+                        "<div class='movieMeta'>
+                            <h5>Release Date: {{ movie.release_date }}</h5>
+                            <h5>Voter Rating: {{ movie.vote_average}}</h5>
+                        </div>
+                        <p class='overview'>{{ movie.overview }}</p>"
                 class="tooltipAnchor"
                 data-placement="right"
             ><!--| limitTo:overviewLimit-->

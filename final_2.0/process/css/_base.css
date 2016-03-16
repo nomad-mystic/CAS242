@@ -129,8 +129,6 @@ footer {
     background: #1eacbb;
     margin: 5px;
     color: #FFF;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
     text-align: center;
 }
@@ -145,7 +143,6 @@ footer {
     opacity: 0;
     z-index: 10;
     transition: all 0.3s;
-    -webkit-transition: all 0.3s;
     cursor: pointer;
 }
 .play-button {
@@ -161,9 +158,9 @@ footer {
     opacity: 0;
     text-shadow: 0px 0px 9px #000;
     transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 #historyCarousel .box-cover-overlay:hover + .play-button,
+#trendingCarousel .box-cover-overlay:hover + .play-button,
 #newArrivalsCarousel .box-cover-overlay:hover + .play-button {
     opacity: 1;
 }/*--end owlCarousel--*/
@@ -217,12 +214,22 @@ section {
          padding: 5% 0;
         }
     }
+    .movieMeta {
+        background: rgba(0, 0, 0, .1);
+        border: 1px solid rgba(0, 0, 0, .1);
+        padding: .5em;
+        margin: 2% 0;
+    }
+    h3 {
+        font-size: 1.25em;
+    }
 }
 
 /*------------------------------popover--*/
 .popover {
-    width: 150%;
+    width: 175%;
     z-index: 1200;
+    top: 0;
     .popover-title {
         color: #000;
     }
@@ -265,16 +272,19 @@ section {
             margin-top: 0;
         }
     }
+    .movieCarouselSection {
+        margin: 1% 0 0 0;
+    }
 } /*end min-width: 767px*/
 
 
 @media (min-width: 992px) {
-    #newArrivalsCarousel > div.owl-wrapper-outer,
-    #trendingCarousel > div.owl-wrapper-outer,
-    #historyCarousel > div.owl-wrapper-outer {
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }
+    /*#newArrivalsCarousel > div.owl-wrapper-outer,*/
+    /*#trendingCarousel > div.owl-wrapper-outer,*/
+    /*#historyCarousel > div.owl-wrapper-outer {*/
+        /*padding-top: 2%;*/
+        /*padding-bottom: 2%;*/
+    /*}*/
     header {
         .headerCarouselText h1 {
             font-size: 3em;
@@ -292,6 +302,9 @@ section {
                 /*margin-left: 2%;*/
                 margin-top: 2%;
             }
+            .owl-controls {
+                bottom: 30px;
+            }
         }
     }/*-end header-*/
     footer {
@@ -307,7 +320,7 @@ section {
         }
     }/*--end footer--*/
     .movieCarouselSection {
-        /*margin: 1% 0 0 0;*/
+        margin: 1% 0 0 0;
         h2 {
             font-size: 2em;
         }
@@ -324,7 +337,11 @@ section {
             /*margin-left: 2%;*/
             margin-top: 2%;
             }
+            .owl-controls {
+                bottom: 40px;
+            }
         }
+
     }/*--end header--*/
     .movieCarouselSection {
         margin: 1% 0 0 0;

@@ -20,9 +20,6 @@
 // App Controller
     app.controller('AppController', ['$scope', '$http', function($scope, $http) {
 
-        // Filters
-        $scope.overviewLimit = 240;
-
         /*--newArrivals--*/
         $http({
             method: 'GET',
@@ -61,7 +58,6 @@
             jQueryFunctions.loadingCarousels();
             jQueryFunctions.toggleToolTip();
             jQueryFunctions.toggleHover();
-
         });
     }]); // End app.controller
 
@@ -77,7 +73,6 @@
                 pagination : false,
                 rewindNav : true,
                 lazyLoad: true,
-                //loop: false,
                 navigation: true,
                 navigationText: [
                     "<i class='fa fa-step-backward'></i>",
@@ -102,6 +97,7 @@
 
                 parent.style.position = 'relative';
                 parent.style.zIndex = '1000';
+                jQueryFunctions.sliceOverview();
 
             }).mouseleave(function () {
                 var owlItem = document.getElementsByClassName('owl-item');
@@ -111,6 +107,35 @@
                     owlItem[i].style.zIndex = '';
                 }
             });
+        },
+        sliceOverview: function() {
+            // for popover overview text
+            var windowInnerWidth = window.innerWidth;
+            var i;
+            var j;
+            var overviews = document.getElementsByClassName('overview');
+            var popovers = document.getElementsByClassName('popover');
+
+            if (windowInnerWidth <= 600) {
+                for (j = 0; j < popovers.length; j++) {
+                    popovers[j].style.top = 0;
+                }
+                for (i = 0; i < overviews.length; i++) {
+
+                    overviews[i].innerText = overviews[i].innerText.slice(0, 125) + '...';
+                }
+
+            } else if (windowInnerWidth <= 992) {
+                for (i = 0; i < overviews.length; i++) {
+                    overviews[i].innerText = overviews[i].innerText.slice(0, 150) + '...';
+                }
+
+            } else {
+                console.log(overviews[0].innerText);
+                for (i = 0; i < overviews.length; i++) {
+                    overviews[i].innerText = overviews[i].innerText.slice(0, 175) + '...';
+                }
+            }
         }
     }; // End jQueryFunctions
 })(); // End closure
