@@ -128,7 +128,7 @@ footer button[type="submit"] {
     margin-top: 2%;
 }
 footer .sitemap a {
-    padding: .5em;
+    padding: .5em .25em;
     color: #C8C8C8;
     font-family: 'Roboto',Arial,Helvitica,sans-serif;
     -webkit-transition: all .25s linear;
@@ -200,6 +200,7 @@ footer .sitemap a[target="_blank"] {
 .navbar {
     border-radius: 0;
     font-family: 'Roboto',Arial,Helvitica,sans-serif;
+    padding: 5px 0;
 }
 .navbar ul {
     background: #222;
@@ -226,8 +227,9 @@ footer .sitemap a[target="_blank"] {
     background-size: contain;
     height: 50px;
     width: 240px;
-    margin-right: 12px;
+    margin: 0 12px 0 30px;
 }
+.navbar .navbar-header {}
 /*--end navbar--*/
 /*------------------------------sections*/
 .movieCarouselSection {
@@ -327,7 +329,7 @@ section h3 {
     }
     footer .form-inline .form-group {
         display: block;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
     }
     /*--end footer--*/

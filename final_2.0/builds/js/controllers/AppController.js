@@ -103,7 +103,6 @@
         },
         toggleHover: function() {
             $('.tooltipAnchor').mouseover(function (event) {
-                console.log(event.target.style);
                 // adding style to current tooltip item
                 var parent = event.target.parentNode.parentNode.parentNode;
 
