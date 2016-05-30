@@ -90,7 +90,7 @@ footer {
     }
     .sitemap {
         a {
-            padding: .5em;
+            padding: .5em .25em;
             color: $menuColor;
             font-family: $menuFont;
             transition: all .25s linear;
@@ -171,6 +171,7 @@ footer {
 .navbar {
     border-radius: 0;
     font-family: $menuFont;
+    padding: 5px 0;
     ul {
         background: #222;
     }
@@ -197,7 +198,10 @@ footer {
         background-size: contain;
         height: 50px;
         width: 240px;
-        margin-right: 12px;
+        margin: 0 12px 0 30px;
+    }
+    .navbar-header {
+
     }
 }/*--end navbar--*/
 
@@ -317,7 +321,7 @@ section {
         }
         .form-inline .form-group {
             display:  block;
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
         }
     }/*--end footer--*/
